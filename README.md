@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Quiz Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The Quiz Generator is an automated system that enables users to create customized quizzes by selecting their preferred subject, topic, and question types. Users can also upload a PDF to generate questions directly from the content. The system leverages fine-tuned T5 Large Language Model (LLM) and web scraping to deliver high-quality and tailored quiz content.
 
-## Available Scripts
+## Key Features
+- **Custom Question Generation:** Select subject, topic, and desired question types (e.g., multiple choice, true/false, short answer).
+- **PDF Upload Support:** Generate questions directly from an uploaded PDF document.
+- **Advanced AI Integration:** Utilizes a fine-tuned T5 LLM for diverse question types.
+- **Seamless Workflow:** Web scraping to gather relevant data and integrate it into question generation.
 
-In the project directory, you can run:
+## Workflow
+1. **User Input:**
+   - Select a subject and topic from the dropdown menu.
+   - Specify the type (e.g., multiple-choice, true/false) and number of questions.
+   - Optionally, upload a PDF to base the quiz questions on.
+2. **Data Collection:**
+   - Relevant information is scraped from the web based on the selected topic or subtopic.
+3. **Question Generation:**
+   - The fine-tuned T5 LLM generates the requested question types.
+4. **Frontend Delivery:**
+   - The generated questions are displayed in the user interface for review and utilization.
 
-### `npm start`
+## Technology Stack
+### T5 Large Language Model (LLM)
+The T5 LLM is fine-tuned using the following datasets to ensure high-quality question generation:
+- **BOOLQ:** Enhances the model’s ability to generate true/false questions.
+- **MS-MARCO:** Enables the generation of short-answer questions.
+- **CBT:** Trains the model to create fill-in-the-blank questions.
+- **RACE:** Facilitates the creation of multiple-choice questions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Interface
+The user interface provides an intuitive experience for selecting preferences and reviewing generated questions. Dropdown menus and upload options ensure seamless interaction.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+The T5 model by Google for its powerful language generation capabilities.
+The datasets BOOLQ, MS-MARCO, CBT, and RACE for fine-tuning the model.
